@@ -6,3 +6,5 @@ bandit
 chime
 scikit-learn
 drawdata
+requests
+diskcache
