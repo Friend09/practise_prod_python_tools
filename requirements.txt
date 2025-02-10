@@ -9,3 +9,4 @@ drawdata
 requests
 diskcache
 gazpacho
+gin-config
