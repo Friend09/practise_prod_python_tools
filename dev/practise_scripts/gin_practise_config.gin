@@ -1,4 +1,0 @@
-simulate.random_func = @random.uniform
-
-random_uniform.a = 0
-random_uniform.b = 2
