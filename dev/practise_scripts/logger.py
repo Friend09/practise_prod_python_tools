@@ -1,25 +1,29 @@
 import logging
+from rich.logging import RichHandler
 
 logger = logging.getLogger(__name__)
 
-# the handler determines where the log go: stdout/file
-shell_handler = logging.StreamHandler()
-file_handler = logging.FileHandler("../../logs/debug.log")
+# the handler determines where the logs go: stdout/file
+shell_handler = RichHandler()
+file_handler = logging.FileHandler("/Users/vamsi_mbmax/Library/CloudStorage/OneDrive-Personal/01_vam_PROJECTS/LEARNING/proj_Productivity/dev_proj_Productivity/practise_prod_python_tools/logs/debug.log")
 
-# change the line to see different levels of lines being logged
+# set the logging level
 logger.setLevel(logging.DEBUG)
-shell_handler.setLevel(logging.WARNING)
+shell_handler.setLevel(logging.DEBUG)
 file_handler.setLevel(logging.DEBUG)
 
-# the formatter determines what our logs will look like
-fmt_shell = '[%(levelname)s %(asctime)s] %(filename)s %(funcName)s %(lineno)s %(message)s'
-fmt_file = '%'
+# define the log format
+fmt_shell = '%(message)s'
+fmt_file = '%(levelname)s %(asctime)s [%(filename)s:%(funcName)s:%(lineno)d] %(message)s'
 
+# initiate the formatter
+shell_formatter = logging.Formatter(fmt_shell)
+file_formatter = logging.Formatter(fmt_file)
 
+# use the formatter w/ logger
+shell_handler.setFormatter(shell_formatter)
+file_handler.setFormatter(file_formatter)
 
-logger.debug("This is a DEBUG statement")
-logger.info("This is a info statement")
-logger.warning("This is a warning statement")
-logger.error("This is a error statement")
-logger.critical("This is a critical statement")
-logger.info("---Logging started---")
+# start logging
+logger.addHandler(shell_handler)
+logger.addHandler(file_handler)
