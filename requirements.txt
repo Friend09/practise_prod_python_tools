@@ -11,3 +11,4 @@ diskcache
 gazpacho
 gin-config
 parse
+rich
