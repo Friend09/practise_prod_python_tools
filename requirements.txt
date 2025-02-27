@@ -12,3 +12,4 @@ gazpacho
 gin-config
 parse
 rich
+black
