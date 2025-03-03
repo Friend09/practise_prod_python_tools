@@ -13,3 +13,4 @@ gin-config
 parse
 rich
 black
+flake8
