@@ -1,6 +1,5 @@
 settings = {"a": 1, "b": 2, "c": 3}
 
-
 def fibonachi(s1, s2, n):
     """
     calculates the fibonachi sequence
@@ -11,6 +10,10 @@ def fibonachi(s1, s2, n):
         s1, s2 = s2, s1 + s2
         result.append(s2)
     return result
+
+
+
+
 
 
 def fibonachi_standard(n):
