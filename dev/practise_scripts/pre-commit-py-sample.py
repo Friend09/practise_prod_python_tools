@@ -10,4 +10,4 @@ def add(a, b):
 
 
 result = add(5, "10")
-print("The result is: " + result)
+print("The result is:" + result)
