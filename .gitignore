@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# miscellaneous
+# Specific path exclusions
+/dev/test_github_actions
