@@ -1,15 +1,22 @@
-install:
-	uv pip install --upgrade pip && \
-	uv pip install -r requirements.txt
-
-clean:
-	rm -rf .pytest_cache .ruff_cache
+compile:
+	uv pip compile requirements.in -o requirements.txt
 
 dev: install
 	uv pip install -r dev-requirements.txt
 
+install:
+	uv pip install --upgrade pip && \
+	uv pip install -r requirements.txt ; \
+	clear
+
+clean:
+	rm -rf .pytest_cache .ruff_cache
+
+all: clean compile install
+
 help:
 	@echo "Available commands:"
+	@echo "  compile  - updates requirements.txt based on requirements.in document"
 	@echo "  install  - Upgrade pip and install packages from requirements.txt"
 	@echo "  clean    - Remove .pytest_cache and .ruff_cache directories"
 	@echo "  dev      - Run install and then install dev dependencies from dev-requirements.txt"

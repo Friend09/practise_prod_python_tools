@@ -20,4 +20,6 @@ pre-commit
 pytest
 pytest-cov
 ruff
-pdocs3
+pdocs
+streamlit
+isort
