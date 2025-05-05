@@ -23,3 +23,4 @@ ruff
 pdocs
 streamlit
 isort
+questionary
