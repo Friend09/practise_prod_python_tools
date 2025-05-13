@@ -25,3 +25,4 @@ rich
 ruff
 scikit-learn
 streamlit
+tqdm
