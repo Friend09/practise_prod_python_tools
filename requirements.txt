@@ -34,6 +34,7 @@ click==8.1.8
     # via
     #   black
     #   streamlit
+    #   typer
 comm==0.2.2
     # via
     #   ipykernel
@@ -272,6 +273,7 @@ rich==14.0.0
     # via
     #   -r requirements.in
     #   bandit
+    #   typer
 rpds-py==0.24.0
     # via
     #   jsonschema
@@ -284,6 +286,8 @@ scipy==1.15.2
     # via scikit-learn
 setuptools==80.0.0
     # via pbr
+shellingham==1.5.4
+    # via typer
 six==1.17.0
     # via python-dateutil
 smmap==5.0.2
@@ -317,6 +321,8 @@ traitlets==5.14.3
     #   jupyter-core
     #   matplotlib-inline
     #   nbformat
+typer==0.15.4
+    # via -r requirements.in
 typing-extensions==4.13.2
     # via
     #   altair
@@ -325,6 +331,7 @@ typing-extensions==4.13.2
     #   pyee
     #   referencing
     #   streamlit
+    #   typer
 tzdata==2025.2
     # via pandas
 urllib3==2.4.0
