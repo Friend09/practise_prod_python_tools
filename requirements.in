@@ -27,3 +27,7 @@ scikit-learn
 streamlit
 tqdm
 typer
+annoy
+numpy
+pydantic
+python-dotenv
