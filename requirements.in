@@ -31,3 +31,13 @@ annoy
 numpy
 pydantic
 python-dotenv
+embetter
+embetter[text]
+embetter[spacy]
+embetter[sense2vec]
+embetter[gensim]
+embetter[bpemb]
+embetter[vision]
+embetter[all]
+embetter[sbert]
+scikit-learn
