@@ -10,6 +10,7 @@ anyio==4.9.0
     # via
     #   httpx
     #   openai
+    #   starlette
 anywidget==0.9.18
     # via drawdata
 appnope==0.1.4
@@ -54,8 +55,11 @@ chime==0.7.0
 click==8.1.8
     # via
     #   black
+    #   marimo
+    #   ray
     #   streamlit
     #   typer
+    #   uvicorn
 cloudpathlib==0.21.1
     # via weasel
 comm==0.2.2
@@ -91,6 +95,8 @@ distro==1.9.0
     # via openai
 docstring-parser==0.16
     # via pdocs
+docutils==0.21.2
+    # via marimo
 drawdata==0.3.7
     # via -r requirements.in
 embetter==0.7.0
@@ -104,6 +110,7 @@ fastjsonschema==2.21.1
 filelock==3.18.0
     # via
     #   huggingface-hub
+    #   ray
     #   torch
     #   transformers
     #   virtualenv
@@ -132,7 +139,9 @@ gitpython==3.1.44
 greenlet==3.2.1
     # via playwright
 h11==0.16.0
-    # via httpcore
+    # via
+    #   httpcore
+    #   uvicorn
 httpcore==1.0.9
     # via httpx
 httpx==0.28.1
@@ -167,8 +176,16 @@ ipywidgets==8.1.6
     # via anywidget
 isort==6.0.1
     # via -r requirements.in
+itsdangerous==2.2.0
+    # via marimo
+jax==0.5.3
+    # via -r requirements.in
+jaxlib==0.5.3
+    # via jax
 jedi==0.19.2
-    # via ipython
+    # via
+    #   ipython
+    #   marimo
 jinja2==3.1.6
     # via
     #   altair
@@ -186,6 +203,7 @@ jsonschema==4.23.0
     # via
     #   altair
     #   nbformat
+    #   ray
 jsonschema-specifications==2025.4.1
     # via jsonschema
 jupyter-client==8.6.3
@@ -203,12 +221,19 @@ langcodes==3.5.0
     # via spacy
 language-data==1.3.0
     # via langcodes
+loro==1.5.1
+    # via marimo
 mako==1.3.10
     # via pdocs
+marimo==0.14.0
+    # via -r requirements.in
 marisa-trie==1.2.1
     # via language-data
 markdown==3.8
-    # via pdocs
+    # via
+    #   marimo
+    #   pdocs
+    #   pymdown-extensions
 markdown-it-py==3.0.0
     # via rich
 markupsafe==3.0.2
@@ -225,10 +250,16 @@ mccabe==0.7.0
     # via flake8
 mdurl==0.1.2
     # via markdown-it-py
+ml-dtypes==0.4.1
+    # via
+    #   jax
+    #   jaxlib
 model2vec==0.5.0
     # via embetter
 mpmath==1.3.0
     # via sympy
+msgpack==1.1.0
+    # via ray
 murmurhash==1.0.12
     # via
     #   preshed
@@ -237,7 +268,9 @@ murmurhash==1.0.12
 mypy-extensions==1.1.0
     # via black
 narwhals==1.37.1
-    # via altair
+    # via
+    #   altair
+    #   marimo
 nbformat==5.10.4
     # via -r requirements.in
 nest-asyncio==1.6.0
@@ -253,7 +286,10 @@ numpy==1.26.4
     #   bpemb
     #   contourpy
     #   gensim
+    #   jax
+    #   jaxlib
     #   matplotlib
+    #   ml-dtypes
     #   model2vec
     #   pandas
     #   pydeck
@@ -267,14 +303,18 @@ numpy==1.26.4
     #   transformers
 openai==1.81.0
     # via embetter
+opt-einsum==3.4.0
+    # via jax
 packaging==24.2
     # via
     #   altair
     #   black
     #   huggingface-hub
     #   ipykernel
+    #   marimo
     #   matplotlib
     #   pytest
+    #   ray
     #   skops
     #   spacy
     #   streamlit
@@ -326,9 +366,13 @@ prompt-toolkit==3.0.51
     #   ipython
     #   questionary
 protobuf==6.30.2
-    # via streamlit
+    # via
+    #   ray
+    #   streamlit
 psutil==7.0.0
-    # via ipykernel
+    # via
+    #   ipykernel
+    #   marimo
 psygnal==0.12.0
     # via anywidget
 ptyprocess==0.7.0
@@ -359,7 +403,10 @@ pygments==2.19.1
     # via
     #   ipython
     #   ipython-pygments-lexers
+    #   marimo
     #   rich
+pymdown-extensions==10.15
+    # via marimo
 pyparsing==3.2.3
     # via matplotlib
 pytest==8.3.5
@@ -381,7 +428,10 @@ pyyaml==6.0.2
     # via
     #   bandit
     #   huggingface-hub
+    #   marimo
     #   pre-commit
+    #   pymdown-extensions
+    #   ray
     #   timm
     #   transformers
 pyzmq==26.4.0
@@ -389,6 +439,8 @@ pyzmq==26.4.0
     #   ipykernel
     #   jupyter-client
 questionary==2.1.0
+    # via -r requirements.in
+ray==2.47.0
     # via -r requirements.in
 referencing==0.36.2
     # via
@@ -402,6 +454,7 @@ requests==2.32.3
     #   bpemb
     #   hug
     #   huggingface-hub
+    #   ray
     #   spacy
     #   streamlit
     #   transformers
@@ -433,6 +486,8 @@ scipy==1.12.0
     # via
     #   embetter
     #   gensim
+    #   jax
+    #   jaxlib
     #   scikit-learn
     #   sentence-transformers
 sense2vec==2.0.0
@@ -448,6 +503,7 @@ setuptools==80.0.0
     #   pbr
     #   spacy
     #   thinc
+    #   torch
 shellingham==1.5.4
     # via typer
 six==1.17.0
@@ -481,6 +537,8 @@ srsly==2.5.1
     #   weasel
 stack-data==0.6.3
     # via ipython
+starlette==0.47.0
+    # via marimo
 stevedore==5.4.1
     # via bandit
 streamlit==1.45.0
@@ -503,6 +561,8 @@ tokenizers==0.21.1
     #   transformers
 toml==0.10.2
     # via streamlit
+tomlkit==0.13.3
+    # via marimo
 torch==2.7.0
     # via
     #   sentence-transformers
@@ -545,15 +605,12 @@ typer==0.15.4
 typing-extensions==4.13.2
     # via
     #   altair
-    #   anyio
     #   anywidget
     #   huggingface-hub
-    #   ipython
     #   openai
     #   pydantic
     #   pydantic-core
     #   pyee
-    #   referencing
     #   sentence-transformers
     #   streamlit
     #   torch
@@ -565,6 +622,8 @@ tzdata==2025.2
     # via pandas
 urllib3==2.4.0
     # via requests
+uvicorn==0.34.3
+    # via marimo
 virtualenv==20.30.0
     # via pre-commit
 wasabi==0.10.1
@@ -577,6 +636,8 @@ wcwidth==0.2.13
     # via prompt-toolkit
 weasel==0.4.1
     # via spacy
+websockets==15.0.1
+    # via marimo
 widgetsnbextension==4.0.14
     # via ipywidgets
 wrapt==1.17.2

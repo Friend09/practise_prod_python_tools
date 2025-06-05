@@ -1,0 +1,14 @@
+# PySpark and related dependencies
+pyspark==4.0.0
+jupyter==1.1.1
+jupyterlab==4.4.3
+pandas==2.3.0
+numpy==2.3.0
+matplotlib==3.10.3
+seaborn==0.13.2
+
+# Additional useful libraries for data science with PySpark
+plotly>=5.0.0
+scikit-learn>=1.0.0
+pyarrow>=10.0.0  # For better Parquet support
+delta-spark>=3.0.0  # For Delta Lake (optional)
