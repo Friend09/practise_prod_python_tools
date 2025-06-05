@@ -167,6 +167,10 @@ ipywidgets==8.1.6
     # via anywidget
 isort==6.0.1
     # via -r requirements.in
+jax==0.5.3
+    # via -r requirements.in
+jaxlib==0.5.3
+    # via jax
 jedi==0.19.2
     # via ipython
 jinja2==3.1.6
@@ -225,6 +229,10 @@ mccabe==0.7.0
     # via flake8
 mdurl==0.1.2
     # via markdown-it-py
+ml-dtypes==0.4.1
+    # via
+    #   jax
+    #   jaxlib
 model2vec==0.5.0
     # via embetter
 mpmath==1.3.0
@@ -253,7 +261,10 @@ numpy==1.26.4
     #   bpemb
     #   contourpy
     #   gensim
+    #   jax
+    #   jaxlib
     #   matplotlib
+    #   ml-dtypes
     #   model2vec
     #   pandas
     #   pydeck
@@ -267,6 +278,8 @@ numpy==1.26.4
     #   transformers
 openai==1.81.0
     # via embetter
+opt-einsum==3.4.0
+    # via jax
 packaging==24.2
     # via
     #   altair
@@ -433,6 +446,8 @@ scipy==1.12.0
     # via
     #   embetter
     #   gensim
+    #   jax
+    #   jaxlib
     #   scikit-learn
     #   sentence-transformers
 sense2vec==2.0.0
@@ -448,6 +463,7 @@ setuptools==80.0.0
     #   pbr
     #   spacy
     #   thinc
+    #   torch
 shellingham==1.5.4
     # via typer
 six==1.17.0
@@ -545,15 +561,12 @@ typer==0.15.4
 typing-extensions==4.13.2
     # via
     #   altair
-    #   anyio
     #   anywidget
     #   huggingface-hub
-    #   ipython
     #   openai
     #   pydantic
     #   pydantic-core
     #   pyee
-    #   referencing
     #   sentence-transformers
     #   streamlit
     #   torch

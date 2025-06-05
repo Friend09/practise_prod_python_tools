@@ -41,3 +41,4 @@ embetter[vision]
 embetter[all]
 embetter[sbert]
 scikit-learn
+jax
