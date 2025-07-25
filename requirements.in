@@ -40,7 +40,6 @@ requests
 rich
 ruff
 scikit-learn
-scikit-learn
 streamlit
 tqdm
 typer
