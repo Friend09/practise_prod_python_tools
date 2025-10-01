@@ -17,9 +17,12 @@ embetter[vision]
 flake8
 gazpacho
 gin-config
+h5py
 ipykernel
 isort
 jax
+kagglehub
+marimo
 matplotlib
 nbformat
 numpy
@@ -43,5 +46,6 @@ scikit-learn
 streamlit
 tqdm
 typer
-marimo
-kagglehub
+sympy
+csvs-to-sqlite
+datasette
