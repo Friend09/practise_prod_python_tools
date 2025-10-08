@@ -26,7 +26,6 @@ marimo
 matplotlib
 nbformat
 numpy
-numpy
 pandas
 parse
 pdocs
@@ -49,3 +48,5 @@ typer
 sympy
 csvs-to-sqlite
 datasette
+datasette-vega
+duckdb

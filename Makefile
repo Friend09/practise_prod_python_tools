@@ -5,8 +5,8 @@ dev: install
 	uv pip install -r dev-requirements.txt
 
 install:
-	uv pip install --python 3.12 --upgrade pip && \
-	uv pip install --python 3.12 -r requirements.txt ; \
+	uv pip install --upgrade pip && \
+	uv pip install -r requirements.txt ; \
 	clear
 
 clean:
