@@ -7,8 +7,6 @@ diskcache
 drawdata
 embetter
 embetter[all]
-embetter[bpemb]
-embetter[gensim]
 embetter[sbert]
 embetter[sense2vec]
 embetter[spacy]
@@ -50,3 +48,4 @@ csvs-to-sqlite
 datasette
 datasette-vega
 duckdb
+transformers!=4.57.0

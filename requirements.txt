@@ -653,8 +653,10 @@ traitlets==5.14.3
     #   jupyter-core
     #   matplotlib-inline
     #   nbformat
-transformers==4.57.0
-    # via sentence-transformers
+transformers==4.57.3
+    # via
+    #   -r requirements.in
+    #   sentence-transformers
 typer==0.19.2
     # via
     #   -r requirements.in
